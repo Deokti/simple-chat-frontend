@@ -1,4 +1,4 @@
-import { useContext, useRef } from "react";
+import { useContext } from "react";
 import { useState } from "react";
 import { AppContext } from "../context/app.context";
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
@@ -6,7 +6,6 @@ import { Avatar, Box, Button, TextField, Typography } from "@mui/material";
 import { socket, SOCKET_PATH } from "../config/socket";
 import { v4 as uuidv4 } from 'uuid';
 import axios from "axios";
-import { scrollToByRef } from "../helpers/scrollToByRef";
 
 export default function LoginForm() {
   const [username, setUsername] = useState("");
