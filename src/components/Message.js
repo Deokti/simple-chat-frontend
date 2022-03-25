@@ -2,7 +2,6 @@ import { Typography } from "@mui/material";
 import { Box } from "@mui/system";
 
 export default function Message({ text, authorName, isAuthor }) {
-  console.log(isAuthor);
   return (
     <Box width="40%" style={{
       backgroundColor: isAuthor ? "#6C90FF" : "#FCFCFC",
