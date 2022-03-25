@@ -12,7 +12,9 @@ export default function Message({ text, authorName, isAuthor }) {
       color: "#14142B",
       borderRadius: 4,
       marginBottom: 10,
-    }}>
+    }}
+      className="word-break"
+    >
       <Typography variant="span" display="block" style={{
         fontSize: 12,
         color: isAuthor ? "rgba(252, 252, 252, 0.5)" : "rgba(129, 145, 169, 1)",

@@ -16,3 +16,9 @@ body {
   justify-content: center;
   align-items: center;
 }
+
+.word-break {
+  word-wrap: normal;
+  word-break: break-word;
+  line-break: auto;
+}

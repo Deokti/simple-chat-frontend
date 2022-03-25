@@ -18,7 +18,8 @@ export default function LoginForm() {
     e.preventDefault();
 
     if (!username) return;
-    if (username.length < 4) return;
+    if (username.length < 2) return;
+    if (username.length > 20) return;
 
     const obj = { username, uid: uuidv4() };
     socket.emit("JOINED", obj);
@@ -48,7 +49,7 @@ export default function LoginForm() {
           required
           fullWidth
           value={username}
-          label="Превдоним"
+          label="Превдоним (от 2 до 20 символов)"
           onChange={setValue}
           autoFocus
         />

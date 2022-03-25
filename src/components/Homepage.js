@@ -27,7 +27,9 @@ export default function Homepage({ user, users, messages }) {
                   fontSize: 14,
                   marginBottom: 6,
                   borderRadius: 4,
-                }}>
+                }}
+                  className="word-break"
+                >
                   {username}
                 </Box>
               )
