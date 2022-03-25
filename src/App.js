@@ -15,18 +15,11 @@ function App() {
     ]));
   }, [setMessages]);
 
-  const setUser = useCallback((user) => {
-    setUsers((prevState) => ([
-      ...prevState,
-      user
-    ]));
-  }, [setUsers]);
-
   useEffect(() => {
-    socket.on("SET_USERS", setUser);
+    socket.on("SET_USERS", setUsers);
     socket.on("SET_MESSAGE", setMessage);
     socket.on("USER_DISCONNECT", setUsers);
-  }, [setMessage, setUser, setUsers]);
+  }, [setMessage, setUsers]);
 
   return (
     <div className="App">
